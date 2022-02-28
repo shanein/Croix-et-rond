@@ -43,7 +43,7 @@ h1 {
 }
 
 .case.event:hover {
-    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .croix {
@@ -60,9 +60,7 @@ h1 {
 
 div#app {
     display: grid;
-    grid-gap: 3px;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: white;
 }
 
 .texte-plus {
@@ -110,4 +108,17 @@ div#app {
 
 .draw.active {
     display: initial;
+}
+
+.case {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#app > .case:nth-child(3n) {
+    border-right: 0px;
+}
+
+#app > .case:nth-last-child(-n+3) {
+    border-bottom: 0;
 }
